@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}" />
+        <title>Resultado Busca CEP</title>
+    </head>
+    <body>
+        <div class="result">
+            <h1>Resultado do CEP</h1>
+            <div class="result-text">
+                <p><span>Cep:</span> {{data['cep']}}</p>
+                <p><span>Rua:</span> {{data['logradouro']}}</p>
+                <p><span>Cidade:</span> {{data['localidade']}}</p>
+                <p><span>Estado:</span> {{data['uf']}}</p>
+                <p><span>DDD:</span> {{data['ddd']}}</p>
+            </div>
+            <a class="btn" href="/">Consultar outro CEP</a>
+        </div>
+    </body>
+</html>
